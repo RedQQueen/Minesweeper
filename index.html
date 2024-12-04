@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minesweeper</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Minesweeper</h1>
+    <div class="game-info">
+      <!-- Timer -->
+      <p>Timer: <span id="timer">00:00</span></p>
+      <!-- Flags Used -->
+      <p>Flags: <span id="flag-count">0</span></p>
+    </div>
+    <!-- Reset Button-->
+    <button id="reset-button">Reset Game</button>
+    <!-- Instructions Button & Modal -->
+    <button id="instructions-button">Instructions</button>
+    <div id="instructions-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2>How to Play:</h2>
+        <ul>
+          <li>Click on a cell to reveal it.</li>
+          <li>
+            If you think a cell contains a bomb, right-click on it to place a
+            flag (🚩). (Tap the trackpad with two-fingers on Mac)
+          </li>
+          <li>You only have 20 flags (🚩) available, flag responsibly.</li>
+          <li>The timer starts when you click your first cell.</li>
+          <li>Your goal is to reveal all cells without bombs.</li>
+          <li>If you reveal a bomb, you lose!</li>
+        </ul>
+      </div>
+    </div>
+    <div id="game-board" class="game-board"></div>
+    <div id="winnerMessage">Congratulations, you've won!</div>
+    <script src="index.js"></script>
+  </body>
+</html>
